@@ -5,7 +5,7 @@
 classDiagram
 
     class Program {
-        x
+        + Main()void
     }
 
     class Character {
@@ -23,12 +23,14 @@ classDiagram
     }
 
     class Weapon {
-        x
+        # power: float
+        + Weapon ()float
     }
 
     class Sword {
         + BladeLength: float
         + Sword(): float
+        + AttackWithSword()void
     }
 
     class Gun {

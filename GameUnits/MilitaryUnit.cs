@@ -1,12 +1,18 @@
 namespace GameUnits
 {
-    public class MilitaryUnit : Unit // Heranca!!
+    /// <summary>
+    /// Class that defines Military Units that has legacy from class Unit
+    /// </summary>
+    public class MilitaryUnit : Unit
     {
         public int AttackPower { get; }
         public int XP { get; private set; }
 
         private float _cost;
         
+        /// <summary>
+        /// An override for the property Health, setting the base health + XP.
+        /// </summary>
         public override int Health 
         {
             set
@@ -33,6 +39,13 @@ namespace GameUnits
         {                                                // Unit(int, int)
             AttackPower = attackPower;
             XP = 0;
+        }
+
+        public void Attack(int attackPower)
+        {
+            XP = XP;
+            attackPower = Health - AttackPower;
+
         }
     }
 }

@@ -35,8 +35,8 @@ namespace GameUnits
         }
 
         public SettlerUnit(int mov, int health) : base(1, 3)
-        {                         
-
+        {   
+                                  
         }
 
     }

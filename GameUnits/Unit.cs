@@ -18,9 +18,9 @@ namespace GameUnits
             Health = health;
         }
 
-        public string Move(int movement)
+        public string Move(int mov)
         {
-            return $"{this.movement = movement}";
+            return $"Unit moved {mov} spaces.";
         }
 
         public override string ToString()

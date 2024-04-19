@@ -1,17 +1,20 @@
 namespace GameUnits
 {
-    public class SettlerUnit : Unit // Heranca!!
+    /// <summary>
+    /// Class that defines Settler Units that has legacy from class Unit
+    /// </summary>
+    public class SettlerUnit : Unit
     {
-        public int AttackPower { get; }
-        public int XP { get; private set; }
-
         private float _cost;
         
+        /// <summary>
+        /// An override for the property Health, setting the base at 3.
+        /// </summary>
         public override int Health 
         {
             set
             {
-                Health = base.Health + XP;
+                Health = 3;
             }
 
             get
@@ -20,19 +23,22 @@ namespace GameUnits
             }
         }
 
+        /// <summary>
+        /// An override for the property Cost, setting the base cost at 5.
+        /// </summary>
         public override float Cost
         {
             get
             {
-                return _cost = AttackPower + XP;
+                return _cost = 5;
             }
         }
 
         public SettlerUnit(int mov, int health, int attackPower)
         : base(mov, health)
-        {                                                // Unit(int, int)
-            AttackPower = attackPower;
-            XP = 0;
+        {                         
+            mov = 1;
+            health =3;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace GameUnits
 {
@@ -11,7 +12,7 @@ namespace GameUnits
             {
                 new MilitaryUnit(3, 10, 2),
                 new MilitaryUnit(4, 5, 3),
-                new SettlerUnit(),
+                new SettlerUnit(4,3,5),
             };
 
             // Unidade 0 ataca unidade 1
@@ -23,7 +24,7 @@ namespace GameUnits
             // chamando implicitamente o método ToString() de cada uma delas
             foreach (Unit u in units)
             {
-                Console.WriteLine(u);
+                Console.WriteLine(u.ToString());
             }
 
             // Output esperado:

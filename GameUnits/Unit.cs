@@ -19,5 +19,9 @@ namespace GameUnits
             return $"{this.movement = movement}";
         }
 
+        public void Attack()
+        {
+            return;
+        }
     }
 }

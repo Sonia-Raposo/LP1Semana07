@@ -34,11 +34,10 @@ namespace GameUnits
             }
         }
 
-        public SettlerUnit(int mov, int health, int attackPower)
-        : base(mov, health)
+        public SettlerUnit(int mov, int health) : base(1, 3)
         {                         
-            mov = 1;
-            health =3;
+
         }
+
     }
 }

@@ -1,7 +1,11 @@
 using System.ComponentModel.Design.Serialization;
+using System.Xml.XPath;
 
 namespace GameUnits
 {
+    /// <summary>
+    /// Class that defines Units.
+    /// </summary>
     public abstract class Unit
     {
         private int movement;
@@ -19,9 +23,10 @@ namespace GameUnits
             return $"{this.movement = movement}";
         }
 
-        public void Attack()
+        public override string ToString()
         {
-            return;
+            return 
+            $"{GetType().Name}: Health: {Health},Cost: {Cost.ToString("F2")}";
         }
     }
 }

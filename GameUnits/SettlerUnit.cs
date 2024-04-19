@@ -4,9 +4,7 @@ namespace GameUnits
     /// Class that defines Settler Units that has legacy from class Unit
     /// </summary>
     public class SettlerUnit : Unit
-    {
-        private float _cost;
-        
+    {      
         /// <summary>
         /// An override for the property Health, setting the base at 3.
         /// </summary>
@@ -30,7 +28,7 @@ namespace GameUnits
         {
             get
             {
-                return _cost = 5;
+                return 5;
             }
         }
 
